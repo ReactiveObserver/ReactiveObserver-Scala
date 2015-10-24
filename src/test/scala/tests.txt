@@ -1,0 +1,120 @@
+# Strona
+### DESIGN ISSUES:
+- http://i.keios.eu/snapshot-2015-10-23-03-29-13.png -> frakked transparency
+- http://i.keios.eu/snapshot-2015-10-23-03-31-28.png -> nieklikalne
+- http://i.keios.eu/snapshot-2015-10-23-03-35-55.png -> lolwut
+- http://i.keios.eu/snapshot-2015-10-23-03-37-54.png -> transparency
+- http://i.keios.eu/snapshot-2015-10-23-03-44-18.png -> o co chodzi z wysokością? czemu to tak zjeżdża
+- http://i.keios.eu/snapshot-2015-10-23-03-55-50.png -> samo przez się
+
+### TRANSLATION ISSUES:
+- http://i.keios.eu/snapshot-2015-10-23-03-30-29.png -> Can't find?
+- http://i.keios.eu/snapshot-2015-10-23-03-41-03.png -> kek
+- http://i.keios.eu/snapshot-2015-10-23-03-45-36.png -> brak hasła w login panelu
+
+### BACKEND ISSUES:
+- PG - zmiana stanu powinna mieć pasek progressu, niektóre zajmują dużo czasu, szczególnie z sync mailerem
+- PG - wciąż możliwe jest przeprocesowanie wyceny z pustym koszykiem, bug mocno
+
+### TESTS:
+- Automatyczne wykrywanie jezyka: ✓
+- Zmiana jezyka: ✓
+- Zmiana jezyka na stronie orderów:
+- Przeglądanie oferty: ✓
+- Formularz Kontaktowy: ✓ ? nie wiem czy doszedł email
+- Mapa: ✓
+
+Zarządzanie stroną
+- Editable: ✓
+- Edytor Menu: ✓
+- Slider w Promocje: ✓
+- Portfolio: ✓
+- Ustawienie mapy: ✓
+
+Sign up / Konto
+- Automatyczny: ✓
+- Użytkownika: ✓
+- Administratora: ✓
+- Logowanie: ✓
+- Logowanie importowanym użytkownikiem: ✓ (nice!)
+- Logowanie via Social Media: NOT TESTED (ale można uznać że działa, działa w produkcji na wielu serwisach)
+- Przypomnienie hasła: ✓
+- Zmiana hasła: ✓
+- Zmiana danych osobowych: ✓
+- Powiadomienie admina o nowym signupie: ✓ ? nie wiem czy doszedł email
+
+Zamówienie
+- Pusty Koszyk: ✓
+- Dodawanie produktow do koszyka: ✓
+- Usuwanie produktów z koszyka: ✓
+- Zmiana ilości produktów w koszyku: ✓
+- Tworzenie Quote: ✓
+- Dodawanie itemow z oferty do koszyka w backendzie: ✓
+- Tworzenie Quotables: ✓
+- Dodawanie Quotables do Quote: ✓
+- Powiadomienia e-mail dla klienta: ✓ / X ->
+    * mail dla skasowanego zamówienia prowadzi do "ni mo takiego zamówienia", ale czat się uruchamia z historią rozmowy dla tego zamówienia
+    * mail wycena -> złożone chyba nie dochodzi lub w ogóle nie istnieje
+- Powiadomienia e-mail dla administratora: ? nie wiem
+- Dodawanie Plików: ✓ / X -> pliki są lokalne
+- Dodawanie Tagów: ✓
+- Dodawanie Tagów do Zamówień: ✓
+- Lista zamówień w kontrolerze Tagów: ✓
+- Filtrowanie po nazwie firmy: ✓
+- Automatyczna zmiana statusu: NOT TESTED
+
+
+Stany
+- Usuwanie Quote: ✓ / X to działa, mimo że chyba nie powinno tego być w ogóle.
+- Konwersja Quote w Order: ✓
+- Placed -> Waiting for payment: ✓
+- Placed -> Cancelled: ✓
+- Paid -> In realisation -> Sent: ✓
+- Paid -> Returned: ✓
+- Placed -> Rejected: ✓
+- Waiting for Payment -> Rejected: ✓
+- Sent -> Return Payment: ✓
+- Waiting for Return -> Returned: ✓
+
+Płatności
+- Płatność gotówką: ✓
+- Płatności Stripe: not tested
+- Płatności PayPal: not tested
+- Płatność przelewem: ✓
+- Płatności PayU: NOT TESTED (chyba musi domena byc psstage.keios.eu)
+
+Chat
+- Wiadomości: ✓
+- Wiadomości Systemowe: ✓
+- Auto Odświeżanie: ✓
+- Formatowanie tekstu: ✓
+
+Użytkownicy:
+- Import użytkowników: ✓
+- Export użytkowników: ✓
+- Zmiana danych użytkownika w backend: ✓
+- Zmiana hasła użytkownika w backend: ✓
+
+UserMailer:
+
+- Zapisywanie kopii roboczej:
+- Załączniki:
+- Wysyłanie maila do usera:
+- Wysyłanie maila do grupy:
+- Wysyłanie maila do wszystkich :
+- Wysyłanie maila do niektywnych:
+- Wysyłanie maila do zaimportowanych:
+
+Edytor Oferty:
+- Tworzenie / usuwanie kategorii:
+- Tworzenie / usuwanie właściwości:
+- Tworzenie / usuwanie opcji:
+- Wprowadzanie / wyświetlanie tłumaczeń:
+- Przydzielanie / zmiana grafiki kategorii:
+- Masowa zmiana ceny:
+- Przenoszenie / Kopiowanie:
+- Zmiana wartości:
+- Podgląd oferty:
+- Tworzenie pliku backup:
+- Przywracanie z pliku:
+- Przywracanie z archiwum:
